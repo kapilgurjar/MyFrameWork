@@ -24,6 +24,10 @@ public class OptionsManger {
 			co.addArguments("--incognito");
 		}
 		
+		if(Boolean.parseBoolean(prop.getProperty("remote"))){
+			co.setCapability("browserName", "chrome");
+		}
+		
 		return co;
 	}
 	
@@ -34,6 +38,9 @@ public class OptionsManger {
 		}
 		if (Boolean.parseBoolean(prop.getProperty("incognito"))) {
 			fo.addArguments("-private");
+		}
+		if(Boolean.parseBoolean(prop.getProperty("remote"))){
+			fo.setCapability("browserName", "firefox");
 		}
 		
 		return fo;
