@@ -4,16 +4,19 @@
 <suite name="My App test regression" thread-count="4" parallel="tests" verbose="4">
 
 
-	<test name="Web Automation">
-		<parameter name="browser" value="firefox"></parameter>
+<!--	<test name="Web Automation">-->
+<!--		<parameter name="browser" value="firefox"></parameter>-->
+<!--		<parameter name="browserversion" value="124.0"></parameter>-->
+		
 
-		<classes>
-			<class name="com.qa.myframework.testscripts.GoogleTC" />
-		</classes>
-	</test>
+<!--		<classes>-->
+<!--			<class name="com.qa.myframework.testscripts.GoogleTC" />-->
+<!--		</classes>-->
+<!--	</test>-->
 
 	<test name="Web Automation on chrome">
 		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="browserversion" value="126.0"></parameter>
 
 		<classes>
 			<class name="com.qa.myframework.testscripts.GoogleTC" />
