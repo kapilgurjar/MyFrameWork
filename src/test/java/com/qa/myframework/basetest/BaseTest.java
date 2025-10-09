@@ -17,12 +17,13 @@ public class BaseTest {
 	protected LoginPage lPage;
 
 	@BeforeMethod
-	@Parameters("browser")
-	public void setUp(String browserName) {
+	@Parameters({"browser", "browserversion"})
+	public void setUp(String browserName,String browserVersion) {
 		df = new DriverFactory();
 		prop = df.initProp();
 		if (browserName!= null) {
 			prop.setProperty("browser",browserName);
+			prop.setProperty("browserversion",browserVersion);
 		}
 		driver = df.intDriver(prop);
 		lPage = new LoginPage(driver);
